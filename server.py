@@ -6,6 +6,7 @@ from datetime import datetime
 
 app = Flask(__name__)
 
+
 # First update
 lista, dia = dict(get_data()), datetime.strftime(datetime.today(), '%d')
 lista = {outer_k: {inner_k: float(inner_v) for inner_k, inner_v in outer_v.items()} for outer_k, outer_v in lista.items()}

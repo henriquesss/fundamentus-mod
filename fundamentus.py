@@ -132,26 +132,98 @@ if __name__ == '__main__':
                                'Div.Brut/Pat.',
                                'Cresc.5anos'))
 
-    print('-' * 190)
-    for key, value in result.items():
-        print(result_format.format(key,
-                                   value['Cotacao'],
-                                   value['P/L'],
-                                   value['P/VP'],
-                                   value['PSR'],
-                                   value['DY'],
-                                   value['P/Ativo'],
-                                   value['P/Cap.Giro'],
-                                   value['P/EBIT'],
-                                   value['P/ACL'],
-                                   value['EV/EBIT'],
-                                   value['EV/EBITDA'],
-                                   value['Mrg.Ebit'],
-                                   value['Mrg.Liq.'],
-                                   value['Liq.Corr.'],
-                                   value['ROIC'],
-                                   value['ROE'],
-                                   value['Liq.2meses'],
-                                   value['Pat.Liq'],
-                                   value['Div.Brut/Pat.'],
-                                   value['Cresc.5anos']))
+    # print('-' * 190)
+    # for key, value in result.items():
+    #     print(result_format.format(key,
+    #                                value['Cotacao'],
+    #                                value['P/L'],
+    #                                value['P/VP'],
+    #                                value['PSR'],
+    #                                value['DY'],
+    #                                value['P/Ativo'],
+    #                                value['P/Cap.Giro'],
+    #                                value['P/EBIT'],
+    #                                value['P/ACL'],
+    #                                value['EV/EBIT'],
+    #                                value['EV/EBITDA'],
+    #                                value['Mrg.Ebit'],
+    #                                value['Mrg.Liq.'],
+    #                                value['Liq.Corr.'],
+    #                                value['ROIC'],
+    #                                value['ROE'],
+    #                                value['Liq.2meses'],
+    #                                value['Pat.Liq'],
+    #                                value['Div.Brut/Pat.'],
+    #                                value['Cresc.5anos']))
+
+    # def get_specific_data(stock):
+    #   url = "http://www.fundamentus.com.br/detalhes.php?papel=" + stock
+    #   cj = http.cookiejar.CookieJar()
+    #   opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
+    #   opener.addheaders = [('User-agent', 'Mozilla/5.0 (Windows; U; Windows NT 6.1; rv:2.2) Gecko/20110201'),
+    #                       ('Accept', 'text/html, text/plain, text/css, text/sgml, */*;q=0.01')]
+      
+    #   # Get data from site
+    #   link = opener.open(url, urllib.parse.urlencode({}).encode('UTF-8'))
+    #   content = link.read().decode('ISO-8859-1')
+
+    #   # Get all table instances
+    #   pattern = re.compile('<table class="w728">.*</table>', re.DOTALL)
+    #   reg = re.findall(pattern, content)[0]
+    #   reg = "<div>" + reg + "</div>"
+    #   page = fragment_fromstring(reg)
+    #   all_data = {}
+
+    #   # There is 5 tables with tr, I will get all trs
+    #   all_trs = []
+    #   all_tables = page.xpath("table")
+
+    #   for i in range(0, len(all_tables)):
+    #       all_trs = all_trs + all_tables[i].findall("tr")
+
+    #   # Run through all the trs and get the label and the
+    #   # data for each line
+    #   for tr_index in range(0, len(all_trs)):
+    #       tr = all_trs[tr_index]
+    #       # Get into td
+    #       all_tds = tr.getchildren()
+    #       for td_index in range(0, len(all_tds)):
+    #           td = all_tds[td_index]
+
+
+    #           label = ""
+    #           data = ""
+
+    #           # The page has tds with contents and some 
+    #           # other with not
+    #           if (td.get("class").find("label") != -1):
+    #               # We have a label
+    #               for span in td.getchildren():
+    #                   if (span.get("class").find("txt") != -1):
+    #                       label = span.text
+
+    #               # If we did find a label we have to look 
+    #               # for a value 
+    #               if (label and len(label) > 0):
+    #                   next_td = all_tds[td_index + 1]
+
+    #                   if (next_td.get("class").find("data") != -1):
+    #                       # We have a data
+    #                       for span in next_td.getchildren():
+    #                           if (span.get("class").find("txt") != -1):
+    #                               if (span.text):
+    #                                   data = span.text
+    #                               else:
+    #                                   # If it is a link
+    #                                   span_children = span.getchildren()
+    #                                   if (span_children and len(span_children) > 0):
+    #                                       data = span_children[0].text
+
+    #                               # Include into dict
+    #                               all_data[label] = data
+
+    #                               # Erase it
+    #                               label = ""
+    #                               data = ""
+
+    #   return all_data
