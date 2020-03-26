@@ -1,5 +1,4 @@
 # Fundamentus
-<<<<<<< Updated upstream
 Esta é uma versão modificada da API feita em python3 para análise de ações da BOVESPA utilizando o site fundamentus (www.fundamentus.com.br), que retorna os principais indicadores fundamentalistas em formato JSON.
 <a href="https://github.com/phoemur/fundamentus">Repositório original</a>   
 
